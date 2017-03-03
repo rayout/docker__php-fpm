@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
 # Install extensions using the helper script provided by the base image
 RUN docker-php-ext-install \
     pdo_mysql \
+    pdo \
+    mysqli \
     pdo_pgsql
 
 # Install Memcached for php 7
