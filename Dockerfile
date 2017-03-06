@@ -25,7 +25,7 @@ RUN curl -L -o /tmp/memcached.tar.gz "https://github.com/php-memcached-dev/php-m
     && docker-php-ext-install memcached \
     && rm /tmp/memcached.tar.gz
 
-#RUN usermod -u 1000 www-data
+RUN usermod -u 1000 www-data
 
 WORKDIR /var/www
 
