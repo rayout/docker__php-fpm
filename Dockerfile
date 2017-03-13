@@ -8,7 +8,8 @@ ADD ./site.pool.conf /usr/local/etc/php-fpm.d/
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     libmemcached-dev \
-    curl
+    curl \
+    msmtp
 
 # Install extensions using the helper script provided by the base image
 RUN docker-php-ext-install \
